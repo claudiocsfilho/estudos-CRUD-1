@@ -1,13 +1,16 @@
 package com.claudiocsfilho.estudo_CRUD_1.dto;
 
 import com.claudiocsfilho.estudo_CRUD_1.entitites.Book;
+import jakarta.validation.constraints.NotBlank;
 
 import java.time.LocalDate;
 
 public class BookDTO {
 
     private Long id;
+    @NotBlank (message = "O campo precisa ser preenchido!")
     private String titulo;
+    @NotBlank (message = "O campo precisa ser preenchido!")
     private String autor;
     private LocalDate dataPublicacao;
     private String isbn;
