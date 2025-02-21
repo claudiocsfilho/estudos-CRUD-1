@@ -2,6 +2,7 @@ package com.claudiocsfilho.estudo_CRUD_1.dto;
 
 import com.claudiocsfilho.estudo_CRUD_1.entitites.Book;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.PastOrPresent;
 
 import java.time.LocalDate;
 
@@ -12,6 +13,7 @@ public class BookDTO {
     private String titulo;
     @NotBlank (message = "O campo precisa ser preenchido!")
     private String autor;
+    @PastOrPresent(message = "Insira uma data válida")
     private LocalDate dataPublicacao;
     private String isbn;
 
